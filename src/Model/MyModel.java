@@ -1,5 +1,5 @@
 package Model;
 
-public class MyModel implements IModel
-    {
-    }
+public class MyModel implements IModel {
+
+}
