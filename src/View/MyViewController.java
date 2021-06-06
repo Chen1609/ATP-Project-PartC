@@ -1,6 +1,7 @@
 package View;
 
 import ViewModel.MyViewModel;
+import algorithms.search.Solution;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
@@ -69,6 +70,8 @@ public class MyViewController implements IView, Initializable, Observer {
         alert.setContentText("Solving maze...");
         alert.show();
         viewModel.solveMaze();
+
+        Solution sol = viewModel.getSolution();
     }
 
     public void openFile(ActionEvent actionEvent) {

@@ -23,7 +23,7 @@ public class MyViewModel extends Observable implements Observer {
     }
 
     public int[][] getMaze(){
-        return model.getMaze();
+        return model.getMaze().getMap();
     }
 
     public int getPlayerRow(){
@@ -45,10 +45,10 @@ public class MyViewModel extends Observable implements Observer {
     public void movePlayer(KeyEvent keyEvent){
         MovementDirection direction;
         switch (keyEvent.getCode()){
-            case UP -> direction = MovementDirection.UP;
-            case DOWN -> direction = MovementDirection.DOWN;
-            case LEFT -> direction = MovementDirection.LEFT;
-            case RIGHT -> direction = MovementDirection.RIGHT;
+            case UP, NUMPAD8 -> direction = MovementDirection.UP;
+            case DOWN, NUMPAD2 -> direction = MovementDirection.DOWN;
+            case LEFT, NUMPAD4 -> direction = MovementDirection.LEFT;
+            case RIGHT, NUMPAD6 -> direction = MovementDirection.RIGHT;
             default -> {
                 // no need to move the player...
                 return;
