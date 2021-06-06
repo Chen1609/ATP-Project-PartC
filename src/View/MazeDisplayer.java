@@ -1,5 +1,6 @@
 package View;
 
+import algorithms.search.AState;
 import algorithms.search.Solution;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -11,6 +12,7 @@ import javafx.scene.paint.Color;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class MazeDisplayer extends Canvas {
     private int[][] maze;
@@ -94,7 +96,101 @@ public class MazeDisplayer extends Canvas {
 
     private void drawSolution(GraphicsContext graphicsContext, double cellHeight, double cellWidth) {
         // need to be implemented
-        System.out.println("drawing solution...");
+
+        graphicsContext.setFill(Color.GREEN);
+
+        ArrayList<AState> mazeSolutionSteps = this.solution.getSolutionPath();
+        int lastY = 1, lastX = 0, currY, currX;
+        for (int i = 1; i < mazeSolutionSteps.size(); i++) {
+            String temp = mazeSolutionSteps.get(i).toString();
+            int loc = temp.indexOf(",");
+            currY = Integer.parseInt(temp.substring(1,loc));
+            currX = Integer.parseInt(temp.substring(loc + 2, temp.length() - 1));
+
+//            System.out.println(temp); ///////////
+
+
+            int deltaX = currX - lastX;
+            int deltaY = currY - lastY;
+
+            //System.out.println(currY);
+
+            if(deltaY != 0 && deltaX != 0)
+            {
+                double x,y;
+                if ((deltaY == 1 && deltaX == 1)) {
+                    if (this.maze[currY - 1][currX] != 1) {
+                        y = (currY - 1) * cellHeight;
+                        x = currX * cellWidth;
+                    }
+                    else {
+                        y = currY * cellHeight;
+                        x = (currX - 1) * cellWidth;
+                    }
+                }
+
+                else if (deltaY == -1 && deltaX == -1) {
+                    if (this.maze[currY + 1][currX] != 1) {
+                        y = (currY + 1) * cellHeight;
+                        x = currX * cellWidth;
+                    }
+                    else {
+                        y = currY * cellHeight;
+                        x = (currX + 1) * cellWidth;
+                    }
+                }
+
+                else if (deltaY == 1 && deltaX == -1) {
+                    if (this.maze[currY - 1][currX] != 1) {
+                        y = (currY - 1) * cellHeight;
+                        x = currX * cellWidth;
+                    }
+                    else {
+                        y = currY * cellHeight;
+                        x = (currX + 1) * cellWidth;
+                    }
+                }
+
+                else {
+                    if (this.maze[currY + 1][currX] != 1) {
+                        y = (currY + 1) * cellHeight;
+                        x = currX * cellWidth;
+                    }
+                    else {
+                        y = currY * cellHeight;
+                        x = (currX - 1) * cellWidth;
+                    }
+                }
+                graphicsContext.fillRect(x, y, cellWidth, cellHeight);
+
+            }
+
+            lastY = currY;
+            lastX = currX;
+
+
+
+            double y = currY * cellHeight;
+            double x = currX * cellWidth;
+
+            graphicsContext.fillRect(x, y, cellWidth, cellHeight);
+        }
+
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < cols; j++) {
+//                if(maze[i][j] == 1){
+//                    //if it is a wall:
+//                    double x = j * cellWidth;
+//                    double y = i * cellHeight;
+//                    if(wallImage == null)
+//                        graphicsContext.fillRect(x, y, cellWidth, cellHeight);
+//                    else
+//                        graphicsContext.drawImage(wallImage, x, y, cellWidth, cellHeight);
+//                }
+//            }
+//        }
+
+
     }
 
     private void drawMazeWalls(GraphicsContext graphicsContext, double cellHeight, double cellWidth, int rows, int cols) {
