@@ -5,8 +5,10 @@ import IO.MyDecompressorInputStream;
 import Server.*;
 import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.MyMazeGenerator;
+import algorithms.mazeGenerators.Position;
 import algorithms.search.AState;
 import algorithms.search.Solution;
+import javafx.scene.control.Alert;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -14,6 +16,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.TimeUnit;
 
 
 public class MyModel extends Observable implements IModel {
@@ -23,8 +26,12 @@ public class MyModel extends Observable implements IModel {
     private int playerCol;
     private Solution solution;
 
+    private volatile double lastSceneX;
+    private volatile double lastSceneY;
 
     public MyModel() {
+        lastSceneX = 0;
+        lastSceneY = 0;
 
     }
 
@@ -100,7 +107,30 @@ public class MyModel extends Observable implements IModel {
                 if (playerCol < maze.getXMazeLength() - 1 && maze.getMap()[playerRow][playerCol + 1] != 1)
                     movePlayer(playerRow, playerCol + 1);
             }
+
+            case UPLeft-> {
+                if (playerRow > 0 && playerCol > 0 && maze.getMap()[playerRow - 1][playerCol - 1] != 1)
+                    movePlayer(playerRow - 1, playerCol - 1);
+            }
+            case UPRight-> {
+                if (playerRow > 0 && playerCol < maze.getXMazeLength() - 1 && maze.getMap()[playerRow - 1][playerCol + 1] != 1)
+                    movePlayer(playerRow - 1, playerCol + 1);
+            }
+            case DownLeft -> {
+                if (playerRow < maze.getYMazeLength() - 1 && playerCol > 0 &&  maze.getMap()[playerRow + 1][playerCol - 1] != 1)
+                    movePlayer(playerRow + 1, playerCol - 1);
+            }
+            case DownRight -> {
+                if (playerRow < maze.getYMazeLength() - 1 && playerCol < maze.getXMazeLength() - 1 &&  maze.getMap()[playerRow + 1][playerCol + 1] != 1)
+                    movePlayer(playerRow + 1, playerCol + 1);
+            }
         }
+
+        if(playerRow == maze.getGoalPosition().getRowIndex() && playerCol == maze.getGoalPosition().getColumnIndex()) {
+            setChanged();
+            notifyObservers("goal reached");
+        }
+
     }
 
     private void movePlayer(int row, int col){
@@ -126,8 +156,16 @@ public class MyModel extends Observable implements IModel {
     }
 
     @Override
-    public void solveMaze() {
+    public void solveMaze() throws Exception {
         //solve the maze
+        if(maze == null)
+            throw new Exception();
+
+        else {
+            setChanged();
+            notifyObservers("solving maze");
+        }
+
         Server solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         solveSearchProblemServer.start();
 
@@ -168,5 +206,34 @@ public class MyModel extends Observable implements IModel {
 //            System.out.println(String.format("%s. %s", i, mazeSolutionSteps.get(i).toString()));
 //        }
         return solution;
+    }
+
+    @Override
+    public void movePlayer(double sceneX, double sceneY) {
+        if (maze == null)
+            return;
+        if (sceneX > lastSceneX)
+            this.updatePlayerLocation(MovementDirection.RIGHT);
+
+
+        if (sceneX < lastSceneX) {
+            this.updatePlayerLocation(MovementDirection.LEFT);
+        }
+
+        if (sceneY > lastSceneY) {
+            this.updatePlayerLocation(MovementDirection.DOWN);
+        }
+
+        if (sceneY < lastSceneY) {
+            this.updatePlayerLocation(MovementDirection.UP);
+        }
+
+        lastSceneX = sceneX;
+        lastSceneY = sceneY;
+        try {
+            TimeUnit.MILLISECONDS.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

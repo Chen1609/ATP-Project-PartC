@@ -64,7 +64,7 @@
                     <MenuItem mnemonicParsing="false" text="Delete" />
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" text="About" onAction="#getInstructions"/>
                 </Menu>
             </MenuBar>
         </VBox>
@@ -74,7 +74,7 @@
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
-            <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNamePlayer="./resources/images/mario.jpg" imageFileNameWall="./resources/images/wall.png" onKeyPressed="#keyPressed" width="400.0" />
+            <MazeDisplayer fx:id="mazeDisplayer" height="600.0" imageFileNamePlayer="./resources/images/mario.jpg" imageFileNameWall="./resources/images/wall.png" imageFileNameEndPosition="./resources/images/EndPoint.jpg" onKeyPressed="#keyPressed" onMouseMoved="#mouseMoved" width="600.0" />
         </Pane>
     </center>
 </BorderPane>
