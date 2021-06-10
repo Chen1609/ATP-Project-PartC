@@ -2,8 +2,10 @@ package ViewModel;
 
 import Model.IModel;
 import Model.MovementDirection;
+import algorithms.mazeGenerators.Position;
 import algorithms.search.Solution;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -24,6 +26,10 @@ public class MyViewModel extends Observable implements Observer {
 
     public int[][] getMaze(){
         return model.getMaze().getMap();
+    }
+
+    public Position getGoal() {
+        return model.getMaze().getGoalPosition();
     }
 
     public int getPlayerRow(){
@@ -49,6 +55,11 @@ public class MyViewModel extends Observable implements Observer {
             case DOWN, NUMPAD2 -> direction = MovementDirection.DOWN;
             case LEFT, NUMPAD4 -> direction = MovementDirection.LEFT;
             case RIGHT, NUMPAD6 -> direction = MovementDirection.RIGHT;
+            case NUMPAD7 -> direction = MovementDirection.UPLeft;
+            case NUMPAD9 -> direction = MovementDirection.UPRight;
+            case NUMPAD1 -> direction = MovementDirection.DownLeft;
+            case NUMPAD3 -> direction = MovementDirection.DownRight;
+
             default -> {
                 // no need to move the player...
                 return;
@@ -57,7 +68,11 @@ public class MyViewModel extends Observable implements Observer {
         model.updatePlayerLocation(direction);
     }
 
-    public void solveMaze(){
+    public void solveMaze() throws Exception {
         model.solveMaze();
+    }
+
+    public void movePlayerWithMouse(MouseEvent mouseEvent) {
+        model.movePlayer(mouseEvent.getSceneX(), mouseEvent.getSceneY());
     }
 }

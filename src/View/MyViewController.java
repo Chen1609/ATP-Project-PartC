@@ -7,6 +7,7 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -66,12 +67,16 @@ public class MyViewController implements IView, Initializable, Observer {
     }
 
     public void solveMaze(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Solving maze...");
-        alert.show();
-        viewModel.solveMaze();
 
-        Solution sol = viewModel.getSolution();
+        try {
+            viewModel.solveMaze();
+        } catch (Exception e) {
+            Alert error = new Alert(Alert.AlertType.ERROR);
+            error.setContentText("Maze was not generated \n" + "Hint: Insert numbers and press 'Generate Maze'");
+            error.show();
+        }
+
+        //Solution sol = viewModel.getSolution();
     }
 
     public void openFile(ActionEvent actionEvent) {
@@ -105,11 +110,29 @@ public class MyViewController implements IView, Initializable, Observer {
             case "maze generated" -> mazeGenerated();
             case "player moved" -> playerMoved();
             case "maze solved" -> mazeSolved();
+            case "solving maze" -> solvingMaze();
+            case "goal reached" -> reachingGoal();
             default -> System.out.println("Not implemented change: " + change);
         }
     }
 
+    private void reachingGoal() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Congratulations");
+        alert.setHeaderText("You have reached the flag!");
+        alert.setContentText("press OK to continue.");
+        alert.show();
+    }
+
+    private void solvingMaze() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("Solving maze...");
+        alert.setContentText("Please wait.");
+        alert.show();
+    }
+
     private void mazeSolved() {
+
         mazeDisplayer.setSolution(viewModel.getSolution());
     }
 
@@ -118,6 +141,18 @@ public class MyViewController implements IView, Initializable, Observer {
     }
 
     private void mazeGenerated() {
-        mazeDisplayer.drawMaze(viewModel.getMaze());
+        mazeDisplayer.drawMaze(viewModel.getMaze(), viewModel.getGoal());
+    }
+
+    public void mouseMoved(MouseEvent mouseEvent) {
+        viewModel.movePlayerWithMouse(mouseEvent);
+    }
+
+    public void getInstructions(ActionEvent actionEvent) {
+        Alert info = new Alert(Alert.AlertType.INFORMATION);
+        info.setTitle("Instructions");
+        info.setHeaderText("Welcome to Super Mazes!");
+        info.setContentText("Your goal is to reach the flag icon\n" + "Legal steps: Up, Down, Left, Right and also diagonally\n" + "You can use the keyboard and the mouse to move");
+        info.show();
     }
 }

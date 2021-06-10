@@ -1,5 +1,6 @@
 package View;
 
+import algorithms.mazeGenerators.Position;
 import algorithms.search.AState;
 import algorithms.search.Solution;
 import javafx.beans.property.IntegerProperty;
@@ -17,13 +18,27 @@ import java.util.ArrayList;
 public class MazeDisplayer extends Canvas {
     private int[][] maze;
     private Solution solution;
+    private Position goal;
     // player position:
     private int playerRow = 0;
     private int playerCol = 0;
     // wall and player images:
     StringProperty imageFileNameWall = new SimpleStringProperty();
     StringProperty imageFileNamePlayer = new SimpleStringProperty();
+    StringProperty imageFileNameEndPosition = new SimpleStringProperty();
 
+
+    public String getImageFileNameEndPosition() {
+        return imageFileNameEndPosition.get();
+    }
+
+    public StringProperty imageFileNameEndPositionProperty() {
+        return imageFileNameEndPosition;
+    }
+
+    public void setImageFileNameEndPosition(String imageFileNameEndPosition) {
+        this.imageFileNameEndPosition.set(imageFileNameEndPosition);
+    }
 
     public int getPlayerRow() {
         return playerRow;
@@ -68,8 +83,10 @@ public class MazeDisplayer extends Canvas {
         this.imageFileNamePlayer.set(imageFileNamePlayer);
     }
 
-    public void drawMaze(int[][] maze) {
+    public void drawMaze(int[][] maze, Position goal) {
         this.maze = maze;
+        this.solution = null;
+        this.goal = goal;
         draw();
     }
 
@@ -91,7 +108,25 @@ public class MazeDisplayer extends Canvas {
             if(solution != null)
                 drawSolution(graphicsContext, cellHeight, cellWidth);
             drawPlayer(graphicsContext, cellHeight, cellWidth);
+            drawGoalPosition(graphicsContext, cellHeight, cellWidth, this.goal.getRowIndex(), this.goal.getColumnIndex());
         }
+    }
+
+    private void drawGoalPosition(GraphicsContext graphicsContext, double cellHeight, double cellWidth, int rowIndex, int columnIndex) {
+        double x = columnIndex * cellWidth;
+        double y = rowIndex * cellHeight;
+        graphicsContext.setFill(Color.GREEN);
+
+        Image GoalImage = null;
+        try {
+            GoalImage = new Image(new FileInputStream(getImageFileNameEndPosition()));
+        } catch (FileNotFoundException e) {
+            System.out.println("There is no goal position image file");
+        }
+        if(GoalImage == null)
+            graphicsContext.fillRect(x, y, cellWidth, cellHeight);
+        else
+            graphicsContext.drawImage(GoalImage, x, y, cellWidth, cellHeight);
     }
 
     private void drawSolution(GraphicsContext graphicsContext, double cellHeight, double cellWidth) {
@@ -207,6 +242,16 @@ public class MazeDisplayer extends Canvas {
             for (int j = 0; j < cols; j++) {
                 if(maze[i][j] == 1){
                     //if it is a wall:
+                    double x = j * cellWidth;
+                    double y = i * cellHeight;
+                    if(wallImage == null)
+                        graphicsContext.fillRect(x, y, cellWidth, cellHeight);
+                    else
+                        graphicsContext.drawImage(wallImage, x, y, cellWidth, cellHeight);
+                }
+
+                if (i == this.goal.getRowIndex() && j == this.goal.getColumnIndex()) {
+                    graphicsContext.setFill(Color.YELLOW);
                     double x = j * cellWidth;
                     double y = i * cellHeight;
                     if(wallImage == null)

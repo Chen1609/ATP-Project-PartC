@@ -12,6 +12,8 @@ public interface IModel {
     int getPlayerRow();
     int getPlayerCol();
     void assignObserver(Observer o);
-    void solveMaze();
+    void solveMaze() throws Exception;
     Solution getSolution();
+
+    void movePlayer(double sceneX, double sceneY);
 }
