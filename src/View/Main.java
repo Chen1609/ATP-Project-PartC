@@ -23,6 +23,7 @@ public class Main extends Application {
         MyViewModel viewModel = new MyViewModel(model);
         MyViewController view = fxmlLoader.getController();
         view.setViewModel(viewModel);
+        view.greet();
     }
 
     public static void main(String[] args) {
