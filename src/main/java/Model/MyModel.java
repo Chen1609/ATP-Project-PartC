@@ -9,6 +9,8 @@ import algorithms.mazeGenerators.Position;
 import algorithms.search.AState;
 import algorithms.search.Solution;
 import javafx.scene.control.Alert;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -29,6 +31,9 @@ public class MyModel extends Observable implements IModel {
     private volatile double lastSceneX;
     private volatile double lastSceneY;
 
+    private Configurations conf = Configurations.getInstance();
+    private final Logger LOG = LogManager.getLogger(); //Log4j2
+
     public MyModel() {
         lastSceneX = 0;
         lastSceneY = 0;
@@ -39,6 +44,7 @@ public class MyModel extends Observable implements IModel {
     public void generateMaze(int rows, int cols) {
         Server mazeGeneratingServer = new Server(5400, 1000, new ServerStrategyGenerateMaze());
         mazeGeneratingServer.start();
+        LOG.info("Starting generate maze server at port = " + 5400);
 
         final Maze[] tempMaze = new Maze[1];
         try {
@@ -46,6 +52,7 @@ public class MyModel extends Observable implements IModel {
                 @Override
                 public void clientStrategy(InputStream inFromServer, OutputStream outToServer) {
                     try {
+                        LOG.info(String.format("Client accepted - maze at size %d * %d was generated", rows, cols));
                         ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                         toServer.flush();
                         int[] mazeDimensions = new int[]{rows, cols};
@@ -63,15 +70,18 @@ public class MyModel extends Observable implements IModel {
 
 
                     } catch (EOFException e){
-                        e.printStackTrace();
+                        //e.printStackTrace();
+                        LOG.error("EOFException", e);
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
+                        LOG.error("Exception", e);
                     }
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            LOG.error("UnknownHostException", e);
         }
 
         mazeGeneratingServer.stop();
@@ -168,12 +178,14 @@ public class MyModel extends Observable implements IModel {
 
         Server solveSearchProblemServer = new Server(5401, 1000, new ServerStrategySolveSearchProblem());
         solveSearchProblemServer.start();
+        LOG.info("Starting solving maze server at port = " + 5401);
 
         try {
             Client client = new Client(InetAddress.getLocalHost(), 5401, new IClientStrategy() {
                 @Override
                 public void clientStrategy(InputStream inFromServer, OutputStream outToServer) {
                     try {
+                        LOG.info(String.format("Client accepted - maze was solved"));
                         ObjectOutputStream toServer = new ObjectOutputStream(outToServer);
                         ObjectInputStream fromServer = new ObjectInputStream(inFromServer);
                         toServer.flush();
@@ -183,13 +195,15 @@ public class MyModel extends Observable implements IModel {
                         solution = (Solution) fromServer.readObject(); //read generated maze (compressed with MyCompressor) from server
 
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
+                        LOG.error("Exception", e);
                     }
                 }
             });
             client.communicateWithServer();
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            LOG.error("UnknownHostException", e);
         }
 
         solveSearchProblemServer.stop();
@@ -234,6 +248,32 @@ public class MyModel extends Observable implements IModel {
             TimeUnit.MILLISECONDS.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void setProp(String p) {
+        if (p.equals("DFS")) {
+            conf.setMazeSearchingAlgorithm("DFS");
+        }
+        else if (p.equals("BFS")) {
+            conf.setMazeSearchingAlgorithm("BFS");
+        }
+        else {
+            conf.setMazeSearchingAlgorithm("BEST");
+        }
+    }
+
+    @Override
+    public void setPropGenerate(String s) {
+        if (s.equals("Empty Maze")) {
+            conf.setMazeGeneratingAlgorithm("Empty");
+        }
+        else if (s.equals("Ugly Maze")) {
+            conf.setMazeGeneratingAlgorithm("Simple");
+        }
+        else {
+            conf.setMazeGeneratingAlgorithm("My");
         }
     }
 }

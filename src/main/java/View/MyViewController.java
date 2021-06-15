@@ -320,4 +320,43 @@ public class MyViewController implements IView, Initializable, Observer {
         info.setContentText("This maze has been created by Lidor Ashtamker And Chen Kolely.\n");
         info.show();
     }
+
+    public void changeProperties(ActionEvent actionEvent) {
+        List<String> choices = new ArrayList<>();
+        choices.add("DFS");
+        choices.add("BFS");
+        choices.add("Best");
+
+
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("DFS", choices);
+        dialog.setTitle("Solving Algorithm");
+        dialog.setHeaderText("Please Choose Solving Algorithm");
+        dialog.setContentText(null);
+
+        Optional<String> choice = dialog.showAndWait();
+        if(choice.isPresent()) {
+            viewModel.setProperties(choice.get());
+
+        }
+
+    }
+
+    public void changePropertiesGenerate(ActionEvent actionEvent) {
+        List<String> choices = new ArrayList<>();
+        choices.add("Empty Maze");
+        choices.add("Ugly Maze");
+        choices.add("Special Maze");
+
+
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("Empty Maze", choices);
+        dialog.setTitle("Generate Algorithm");
+        dialog.setHeaderText("Please Choose Generating Algorithm");
+        dialog.setContentText(null);
+
+        Optional<String> choice = dialog.showAndWait();
+        if(choice.isPresent()) {
+            viewModel.setPropertiesGenerate(choice.get());
+
+        }
+    }
 }

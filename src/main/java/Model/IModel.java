@@ -14,6 +14,7 @@ public interface IModel {
     void assignObserver(Observer o);
     void solveMaze() throws Exception;
     Solution getSolution();
-
     void movePlayer(double sceneX, double sceneY);
+    void setProp(String p);
+    void setPropGenerate(String s);
 }

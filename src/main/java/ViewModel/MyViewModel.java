@@ -75,4 +75,13 @@ public class MyViewModel extends Observable implements Observer {
     public void movePlayerWithMouse(MouseEvent mouseEvent) {
         model.movePlayer(mouseEvent.getSceneX(), mouseEvent.getSceneY());
     }
+
+
+    public void setProperties(String p) {
+        model.setProp(p);
+    }
+
+    public void setPropertiesGenerate(String s) {
+        model.setPropGenerate(s);
+    }
 }
