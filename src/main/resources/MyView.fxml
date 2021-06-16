@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import View.MazeDisplayer?>
-<BorderPane onMouseClicked="#mouseClicked" prefHeight="492.0" prefWidth="685.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+<BorderPane fx:controller="View.MyViewController" onMouseClicked="#mouseClicked" prefHeight="492.0" prefWidth="685.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <left>
-        <VBox prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
+        <VBox onZoom="#Zoom" prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
@@ -61,28 +61,26 @@
                     <MenuItem mnemonicParsing="false" text="Save" />
                     <MenuItem mnemonicParsing="false" text="Load" />
                 </Menu>
-            <Menu mnemonicParsing="false" text="Options">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#close" text="Properties" />
-               </items>
-            </Menu>
-                <Menu mnemonicParsing="false" onAction="#close" text="Exit">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
-               </items></Menu>
-                <Menu mnemonicParsing="false" onAction="#getInstructions" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#getInstructions" text="Instructions" />
-               </items></Menu>
-            <Menu mnemonicParsing="false" onAction="#getInfo" text="About">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#getInfo" text="About Us" />
-               </items></Menu>
+                <Menu mnemonicParsing="false" text="Options">
+                   <items>
+                      <MenuItem mnemonicParsing="false" onAction="#changeProperties" text="Change Solving Algorithm" />
+                       <MenuItem mnemonicParsing="false" onAction="#changePropertiesGenerate" text="Change Generating Algorithm" />
+                   </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exit">
+                    <MenuItem mnemonicParsing="false" onAction="#close" text="I Quit" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <MenuItem mnemonicParsing="false" onAction="#getInstructions" text="Me" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="About">
+                    <MenuItem mnemonicParsing="false" onAction="#getInfo" text="Us" />
+                </Menu>
             </MenuBar>
         </VBox>
     </top>
     <center>
-        <Pane BorderPane.alignment="CENTER">
+        <Pane onZoom="#Zoom" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
