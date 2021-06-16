@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
 
     @Override
@@ -17,6 +18,10 @@ public class Main extends Application {
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("Super Mazes");
         primaryStage.setScene(new Scene(root, 1000, 700));
+//        Zoom scrollPane = new Zoom(root);
+//
+//        scrollPane.setFitToWidth(true);
+//        scrollPane.setFitToHeight(true);
         primaryStage.show();
 
         IModel model = new MyModel();

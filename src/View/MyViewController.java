@@ -252,11 +252,14 @@ public class MyViewController implements IView, Initializable, Observer {
         }
 
     public void greet()
-        {
-                    Alert info = new Alert(Alert.AlertType.CONFIRMATION, "",  new ButtonType("Accept!", ButtonBar.ButtonData.YES), new ButtonType("Decline",ButtonBar.ButtonData.CANCEL_CLOSE));
+    {
+        Alert info = new Alert(Alert.AlertType.CONFIRMATION, "",  new ButtonType("Accept!", ButtonBar.ButtonData.YES), new ButtonType("Decline",ButtonBar.ButtonData.CANCEL_CLOSE));
         info.setTitle("Welcome");
         info.setHeaderText("Welcome to Super Mazes!");
-        info.setContentText("Hello and welcome to our maze!\n" + "Mario needs to get to the flag and can really use your help.\n" + "Can you help him?");
+        info.setContentText("""
+                Hello and welcome to our maze!
+                Mario needs to get to the flag and can really use your help.
+                Can you help him?""");
         ButtonType buttonTypeAccept = new ButtonType("Accept!");
         ButtonType buttonTypeDecline = new ButtonType("Decline");
         info.getButtonTypes().setAll(buttonTypeAccept, buttonTypeDecline);
@@ -265,17 +268,9 @@ public class MyViewController implements IView, Initializable, Observer {
             {
                 boxOfChoices();
             }
-        else if(answer.get() == buttonTypeDecline)
+        else if(answer.isPresent() && answer.get() == buttonTypeDecline)
             {
-                ButtonType ExitButtonType = new ButtonType("Exit", ButtonBar.ButtonData.OK_DONE);
-                Dialog<String> dialog = new Dialog<>();
-                dialog.setTitle("Exit");
-                dialog.setContentText("Thank you anyway, and I hope to see you soon.");
-                dialog.getDialogPane().getButtonTypes().add(ExitButtonType);
-                boolean disabled = false; // computed based on content of text fields, for example
-                dialog.getDialogPane().lookupButton(ExitButtonType).setDisable(false);
-                dialog.showAndWait();
-                exit();
+                close();
             }
         }
     private void mazeGenerated() {
@@ -284,22 +279,16 @@ public class MyViewController implements IView, Initializable, Observer {
 
     public void close()
     {
+        ButtonType ExitButtonType = new ButtonType("Exit", ButtonBar.ButtonData.OK_DONE);
+        Dialog<String> dialog = new Dialog<>();
+        dialog.setTitle("Exit");
+        dialog.setContentText("Thank you anyway, and I hope to see you soon.");
+        dialog.getDialogPane().getButtonTypes().add(ExitButtonType);
+        // computed based on content of text fields, for example
+        dialog.getDialogPane().lookupButton(ExitButtonType).setDisable(false);
+        dialog.showAndWait();
         exit();
     }
-
-    public void Zoom(ZoomEvent zoomEvent)
-    {
-        mazeDisplayer.setWidth(mazeDisplayer.getWidth() * zoomEvent.getZoomFactor());
-        mazeDisplayer.setHeight(mazeDisplayer.getHeight() * zoomEvent.getZoomFactor());
-        zoomEvent.consume();
-    }
-//
-//        //inc(mazeDisplayer);
-//        mazeDisplayer.setOnZoomStarted(Event::consume);
-//
-//        //dec(mazeDisplayer);
-//        //log("Rectangle: Zoom event finished");
-//        mazeDisplayer.setOnZoomFinished(Event::consume);
 
     public void mouseMoved(MouseEvent mouseEvent) {
         viewModel.movePlayerWithMouse(mouseEvent);
