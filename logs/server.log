@@ -18,3 +18,301 @@
 2021.06.15 23:22:02.256 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
 2021.06.15 23:22:18.275 INFO  Model.MyModel - Starting solving maze server at port = 5401
 2021.06.15 23:22:18.793 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.16 18:07:12.705 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 18:07:12.786 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 18:10:42.455 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 18:10:42.532 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 18:13:19.976 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 18:13:20.508 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 19:55:00.689 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 19:55:00.731 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:09:39.411 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:09:39.577 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:26:05.604 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:26:05.613 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:26:42.932 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:26:43.443 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:27:32.654 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:27:32.664 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:27:40.392 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:27:40.904 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:40:27.048 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:40:27.058 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:42:19.379 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:42:19.389 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:49:05.897 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:49:05.910 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:50:06.674 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:50:06.684 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.16 20:50:23.474 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:50:23.988 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:50:30.457 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:50:30.963 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:50:37.146 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:50:37.651 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.16 20:51:00.690 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:51:01.197 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:51:12.992 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:51:13.508 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.16 20:51:25.297 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:51:25.806 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:51:36.945 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:51:37.453 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.16 20:56:58.810 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:56:58.818 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 20:57:05.770 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:57:06.285 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.16 20:57:22.105 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:57:22.621 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.16 20:57:39.482 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:57:39.990 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.16 20:57:52.648 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 20:57:53.157 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.16 21:09:37.317 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:09:37.323 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:10:03.171 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:10:03.182 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:13:17.923 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:13:17.940 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:13:21.834 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:13:22.339 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:13:25.964 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:13:26.476 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:13:36.009 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:13:36.519 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:13:41.512 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:13:42.021 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:16:59.740 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:17:00.263 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:17:38.504 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:17:38.515 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:19:47.772 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:19:47.783 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:19:51.851 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:19:52.364 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:19:57.946 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:19:58.455 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.16 21:29:26.198 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:29:26.210 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:59:19.668 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:59:19.769 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 21:59:24.728 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 21:59:25.234 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.16 22:00:05.752 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.16 22:00:05.765 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:42:07.776 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:42:07.871 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:51:33.999 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:51:34.008 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:51:51.068 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:51:51.071 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.17 10:52:08.406 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:52:08.914 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 10:53:12.433 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:53:12.443 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:53:20.496 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:53:21.010 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:53:30.207 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:53:30.721 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 10:53:32.987 INFO  Model.MyModel - Starting solving maze server at port = 5401
+2021.06.17 10:53:33.010 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.17 10:53:53.533 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:53:53.535 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:55:19.904 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:55:19.912 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 10:55:27.901 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:55:28.417 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 10:59:13.667 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 10:59:13.675 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:01:32.377 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:01:32.386 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:02:27.612 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:02:27.622 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:04:32.526 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:04:32.537 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:07:59.577 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:07:59.586 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:08:09.823 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:08:10.334 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 11:09:17.233 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:09:17.241 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:09:54.480 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:09:54.487 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:10:15.369 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:10:15.884 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:11:11.006 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:11:11.017 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:11:17.086 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:11:17.595 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:11:56.887 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:11:56.900 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:13:46.423 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:13:46.432 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:14:41.835 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:14:41.844 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:15:21.378 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:15:21.388 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:16:15.283 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:16:15.289 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:16:30.289 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:16:30.796 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:21:34.972 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:21:34.981 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:21:43.504 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:21:44.007 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:27:33.075 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:27:33.089 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:28:13.885 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:28:13.893 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:28:23.701 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:28:24.217 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:29:40.917 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:29:40.928 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:29:51.231 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:29:51.738 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 11:30:41.952 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:30:41.965 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:30:47.377 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:30:47.887 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:32:45.164 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:32:45.174 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:32:58.104 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:32:58.619 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:35:50.874 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:35:51.408 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:36:25.156 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:36:25.165 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:38:19.057 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:38:19.064 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:41:56.795 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:41:56.803 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:44:22.122 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:44:22.128 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:47:11.976 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:47:11.984 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:47:21.441 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:47:21.958 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:47:27.600 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:47:28.106 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:55:07.362 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:55:07.368 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:55:18.137 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:55:18.650 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 11:58:21.482 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 11:58:21.491 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:00:32.548 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:00:32.559 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:09:11.330 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:09:11.339 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:16:44.731 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:16:44.739 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:22:20.403 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:22:20.410 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:22:39.233 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:22:39.742 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:22:45.370 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:22:45.887 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:22:56.137 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:22:56.139 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:01.106 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:01.614 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:10.233 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:10.745 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:20.481 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:20.983 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:26.714 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:27.220 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:34.033 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:34.035 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:40.616 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:40.618 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:42.047 INFO  Model.MyModel - Starting solving maze server at port = 5401
+2021.06.17 12:23:42.048 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.17 12:23:47.825 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:47.835 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:49.618 INFO  Model.MyModel - Starting solving maze server at port = 5401
+2021.06.17 12:23:50.127 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.17 12:23:51.321 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:51.321 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:52.160 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:52.162 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:52.800 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:52.802 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:53.601 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:53.602 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:54.441 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:54.442 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:54.905 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:54.906 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:55.680 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:55.681 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:56.176 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:56.177 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:23:56.720 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:23:56.722 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:24:02.085 INFO  Model.MyModel - Starting solving maze server at port = 5401
+2021.06.17 12:24:02.592 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.17 12:24:04.008 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:04.009 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 12:24:12.224 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:12.730 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 12:24:17.370 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:17.371 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 12:24:18.624 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:18.625 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 12:24:20.673 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:20.674 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 12:24:21.785 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:21.786 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 12:24:22.849 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 12:24:22.850 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated
+2021.06.17 13:03:50.752 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 13:03:50.769 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.17 13:03:57.635 INFO  Model.MyModel - Starting solving maze server at port = 5401
+2021.06.17 13:03:57.672 INFO  Model.MyModel - Client accepted - maze was solved
+2021.06.17 13:03:59.298 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 13:03:59.299 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.17 14:30:12.661 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:30:12.681 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:30:37.313 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:30:37.321 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:31:21.422 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:31:21.430 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:31:54.875 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:31:55.402 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:32:12.986 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:32:12.999 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:32:41.559 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:32:42.071 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 14:42:11.626 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 14:42:11.635 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 15:01:16.976 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 15:01:16.986 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 15:45:11.371 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 15:45:11.378 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 16:09:52.251 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 16:09:52.262 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:04:37.640 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:04:37.648 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:04:43.086 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:04:43.595 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.17 17:06:43.798 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:06:43.808 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:07:40.167 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:07:40.175 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:19:11.400 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:19:11.439 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:34:25.560 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:34:25.632 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:34:38.385 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:34:38.889 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:34:49.366 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:34:49.883 INFO  Model.MyModel - Client accepted - maze at size 25 * 25 was generated
+2021.06.17 17:36:16.401 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:36:16.410 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:41:09.354 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:41:09.440 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:56:22.059 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:56:22.069 INFO  Model.MyModel - Client accepted - maze at size 10 * 10 was generated
+2021.06.17 17:56:34.095 INFO  Model.MyModel - Starting generate maze server at port = 5400
+2021.06.17 17:56:34.603 INFO  Model.MyModel - Client accepted - maze at size 50 * 50 was generated

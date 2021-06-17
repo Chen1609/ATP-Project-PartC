@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import View.MazeDisplayer?>
-<BorderPane fx:controller="View.MyViewController" onMouseClicked="#mouseClicked" prefHeight="492.0" prefWidth="685.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane onMouseClicked="#mouseClicked" prefHeight="492.0" prefWidth="685.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
     <left>
-        <VBox onZoom="#Zoom" prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
@@ -57,7 +57,7 @@
         <VBox BorderPane.alignment="CENTER">
             <MenuBar>
                 <Menu mnemonicParsing="false" text="File">
-                    <MenuItem mnemonicParsing="false" onAction="#openFile" text="New" />
+                    <MenuItem mnemonicParsing="false" onAction="#loadFile" text="New" />
                     <MenuItem mnemonicParsing="false" text="Save" />
                     <MenuItem mnemonicParsing="false" text="Load" />
                 </Menu>
@@ -68,23 +68,23 @@
                    </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Exit">
-                    <MenuItem mnemonicParsing="false" onAction="#close" text="I Quit" />
+                    <MenuItem mnemonicParsing="false" onAction="#close" text="Quit" />
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
-                    <MenuItem mnemonicParsing="false" onAction="#getInstructions" text="Me" />
+                    <MenuItem mnemonicParsing="false" onAction="#getInstructions" text="Hint" />
                 </Menu>
                 <Menu mnemonicParsing="false" text="About">
-                    <MenuItem mnemonicParsing="false" onAction="#getInfo" text="Us" />
+                    <MenuItem mnemonicParsing="false" onAction="#getInfo" text="About Us" />
                 </Menu>
             </MenuBar>
         </VBox>
     </top>
     <center>
-        <Pane onZoom="#Zoom" BorderPane.alignment="CENTER">
+        <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
-            <MazeDisplayer fx:id="mazeDisplayer" height="600.0" imageFileNameEndPosition="./resources/images/EndPoint.jpg" imageFileNamePlayer="./resources/images/mario.jpg" imageFileNameWall="./resources/images/wall.png" onKeyPressed="#keyPressed" onMouseMoved="#mouseMoved" width="600.0" />
+            <MazeDisplayer fx:id="mazeDisplayer" height="600.0" imageFileNameEndPosition="./resources/images/EndPoint.jpg" imageFileNamePlayer="./resources/images/mario.jpg" imageFileNameWall="./resources/images/wall.png" onKeyPressed="#keyPressed" onMouseDragged="#mouseMoved" width="600.0" />
         </Pane>
     </center>
 </BorderPane>
